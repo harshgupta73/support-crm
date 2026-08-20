@@ -6,6 +6,24 @@ Support CRM allows support teams to create, manage, search, filter, and update c
 
 ---
 
+## Live Demo
+
+**Frontend:** https://support-crm-kohl.vercel.app
+
+**Backend API:** https://support-crm-547q.onrender.com
+
+---
+
+## Deployment
+
+- **Frontend:** Vercel
+- **Backend:** Render
+- **Database:** MongoDB Atlas
+
+The application is deployed as a full-stack system where the React frontend communicates with the Node.js/Express REST API hosted on Render, with MongoDB Atlas used for data storage.
+
+---
+
 ## Features
 
 - Create new support tickets
@@ -47,11 +65,13 @@ Support CRM allows support teams to create, manage, search, filter, and update c
 - Mongoose
 - REST API
 
-### Development Tools
+### Development & Deployment Tools
 
 - Visual Studio Code
 - Git
 - GitHub
+- Vercel
+- Render
 - MongoDB Atlas
 
 ---
@@ -60,6 +80,7 @@ Support CRM allows support teams to create, manage, search, filter, and update c
 
 ```text
 support-crm/
+
 │
 ├── backend/
 │   ├── controllers/
@@ -75,6 +96,7 @@ support-crm/
 │   │   ├── components/
 │   │   ├── pages/
 │   │   ├── App.jsx
+│   │   ├── api.js
 │   │   └── main.jsx
 │   ├── package.json
 │   └── .env
@@ -390,10 +412,10 @@ PORT=5000
 Start the backend server:
 
 ```bash
-npm run dev
+npm start
 ```
 
-The backend runs on:
+The backend runs locally on:
 
 ```text
 http://localhost:5000
@@ -419,7 +441,7 @@ Start the frontend:
 npm run dev
 ```
 
-The frontend runs on:
+The frontend runs locally on:
 
 ```text
 http://localhost:5173
@@ -429,16 +451,30 @@ http://localhost:5173
 
 ## Environment Variables
 
-Environment variables are used for sensitive configuration such as the MongoDB connection string.
+Environment variables are used for sensitive configuration such as the MongoDB connection string and deployed API URL.
 
-Example:
+### Backend
 
 ```env
 MONGO_URI=your_mongodb_connection_string
 PORT=5000
 ```
 
-The actual `.env` file should not be committed to GitHub.
+### Frontend
+
+For local development, the frontend falls back to:
+
+```text
+http://localhost:5000
+```
+
+For production deployment, the API URL is configured using:
+
+```env
+VITE_API_URL=https://support-crm-547q.onrender.com
+```
+
+The actual `.env` files should not be committed to GitHub.
 
 ---
 
@@ -473,6 +509,7 @@ The dashboard, ticket forms, ticket details, search, and filtering interfaces us
 | Add notes/comments | ✅ |
 | Activity history | ✅ |
 | Responsive UI | ✅ |
+| Deployment | ✅ Vercel + Render |
 
 ---
 
