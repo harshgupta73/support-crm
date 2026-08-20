@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../api";
 import "./CreateTicket.css";
 
 function CreateTicket() {
@@ -48,8 +48,8 @@ function CreateTicket() {
 
             setLoading(true);
 
-            const response = await axios.post(
-                "http://localhost:5000/api/tickets",
+            const response = await api.post(
+                "/api/tickets",
                 formData
             );
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
+import api from "../api";
 import "./TicketDetails.css";
 
 function TicketDetails() {
@@ -28,12 +28,12 @@ function TicketDetails() {
             setLoading(true);
             setError("");
 
-            const ticketResponse = await axios.get(
-                `http://localhost:5000/api/tickets/${ticketId}`
+            const ticketResponse = await api.get(
+                `/api/tickets/${ticketId}`
             );
 
-            const notesResponse = await axios.get(
-                `http://localhost:5000/api/notes/${ticketId}`
+            const notesResponse = await api.get(
+                `/api/notes/${ticketId}`
             );
 
             setTicket(ticketResponse.data);
@@ -55,8 +55,8 @@ function TicketDetails() {
             setUpdating(true);
             setUpdateMessage("");
 
-            await axios.put(
-                `http://localhost:5000/api/tickets/${ticketId}`,
+            await api.put(
+                `/api/tickets/${ticketId}`,
                 {
                     status,
                     notes: note

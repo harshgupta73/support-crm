@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import api from "../api";
 import "./Dashboard.css";
 
 function Dashboard() {
@@ -20,9 +20,7 @@ function Dashboard() {
             setLoading(true);
             setError("");
 
-            const response = await axios.get(
-                "http://localhost:5000/api/tickets"
-            );
+            const response = await api.get("/api/tickets");
 
             setTickets(response.data);
 
