@@ -1,0 +1,172 @@
+.dashboard-page {
+    min-height: 100%;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.2rem;
+}
+
+.dashboard-new-ticket {
+    white-space: nowrap;
+}
+
+/* Statistics */
+
+.stat-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 22px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    height: 100%;
+}
+
+.stat-label {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.stat-card h2 {
+    margin: 8px 0 0;
+    font-weight: 700;
+}
+
+/* Filters */
+
+.filter-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+/* Tickets */
+
+.tickets-card {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.tickets-card-header {
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table th {
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.table td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.customer-name {
+    font-weight: 600;
+}
+
+/* Status */
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-open {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-progress {
+    background: #cfe2ff;
+    color: #084298;
+}
+
+.status-resolved {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+/* Empty */
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .dashboard-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .dashboard-new-ticket {
+        width: 100%;
+    }
+
+    .tickets-card-header {
+        padding: 16px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .dashboard-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .dashboard-header p {
+        font-size: 0.9rem;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+
+    .stat-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .filter-card {
+        padding: 16px;
+    }
+
+    .tickets-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .table {
+        min-width: 800px;
+    }
+}

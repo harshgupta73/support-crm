@@ -1,0 +1,35 @@
+.navbar {
+    min-height: 70px;
+}
+
+.navbar-brand {
+    font-size: 1.35rem;
+}
+
+.nav-link {
+    font-size: 1rem;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 15px 0;
+    }
+
+    .navbar-nav .btn {
+        width: 100%;
+    }
+
+    .nav-item.ms-lg-3 {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        min-height: 62px;
+    }
+
+    .navbar-brand {
+        font-size: 1.15rem;
+    }
+}

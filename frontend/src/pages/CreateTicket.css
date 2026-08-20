@@ -1,0 +1,51 @@
+.create-ticket-page {
+    min-height: 100%;
+}
+
+.create-ticket-header {
+    margin-bottom: 25px;
+}
+
+.create-ticket-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.create-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .create-ticket-card {
+        padding: 22px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .create-ticket-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .create-ticket-card {
+        padding: 16px;
+    }
+
+    .create-actions {
+        flex-direction: column-reverse;
+    }
+
+    .create-actions .btn {
+        width: 100%;
+    }
+
+}
